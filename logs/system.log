@@ -46,3 +46,7 @@
 2026-03-22 11:28:55,518 - main - INFO - Starting Hyperparameter Optimization
 2026-03-22 11:28:55,518 - main - INFO - ============================================================
 2026-03-22 11:28:56,377 - main - INFO - Done!
+2026-03-22 11:36:50,033 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 11:36:50,033 - main - INFO - ============================================================
+2026-03-22 11:36:50,033 - main - INFO - Starting Hyperparameter Optimization
+2026-03-22 11:36:50,033 - main - INFO - ============================================================

@@ -17,3 +17,6 @@
 2026-03-22 11:27:37,625 - hpo.Autoformer.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
 2026-03-22 11:28:56,353 - hpo.Autoformer.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=Autoformer, category=crypto, asset=BTCUSDT, horizon=24
 2026-03-22 11:28:56,353 - hpo.Autoformer.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
+2026-03-22 11:36:50,869 - hpo.Autoformer.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=Autoformer, category=crypto, asset=BTCUSDT, horizon=24
+2026-03-22 11:36:50,870 - hpo.Autoformer.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
+2026-03-22 11:36:50,898 - hpo.Autoformer.crypto.BTCUSDT.h24 - INFO - HPO already complete: 5/5 trials finished

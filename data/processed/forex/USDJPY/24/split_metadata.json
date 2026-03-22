@@ -1,0 +1,38 @@
+{
+  "raw_start_datetime": "2010-01-28T05:00:00",
+  "raw_end_datetime": "2026-02-12T00:00:00",
+  "raw_total_timesteps": 100000,
+  "features": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume"
+  ],
+  "target": "close",
+  "window_size": 96,
+  "horizon": 24,
+  "max_samples": 30000,
+  "scaler_type": "standard",
+  "splits": {
+    "train": {
+      "n_samples": 21000,
+      "start_datetime": "2017-11-28T18:00:00",
+      "end_datetime": "2021-04-22T03:00:00",
+      "split_ratio": 0.7
+    },
+    "val": {
+      "n_samples": 4500,
+      "start_datetime": "2022-12-19T18:00:00",
+      "end_datetime": "2023-09-14T03:00:00",
+      "split_ratio": 0.15
+    },
+    "test": {
+      "n_samples": 4500,
+      "start_datetime": "2025-05-15T23:00:00",
+      "end_datetime": "2026-02-12T00:00:00",
+      "split_ratio": 0.15
+    }
+  },
+  "total_windowed_samples": 30000
+}

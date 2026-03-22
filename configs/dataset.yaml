@@ -1,5 +1,7 @@
 # Dataset configuration
-max_samples: 30000
+max_samples: 300
+# max_samples: 30000
+
 # Input features (columns in raw CSV)
 features:
   - open

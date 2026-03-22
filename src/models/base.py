@@ -3,6 +3,11 @@ Base forecaster class.
 
 Defines the common interface that all forecasting models must implement.
 Provides shared functionality for saving/loading checkpoints.
+
+中文说明：
+    本仓库中所有预测模型统一约定：输入 x 为历史窗口的多变量序列，输出为单变量未来序列。
+    与 src/data/windowing 生成的 train_x / train_y 对齐：X 为 (N, L, C)，y 为 (N, H)。
+    符号：B=batch，L=window_size，C=input_size（特征数），H=horizon（预测步数）。
 """
 
 from __future__ import annotations
@@ -25,6 +30,9 @@ class BaseForecaster(nn.Module, ABC):
 
     All model architectures must inherit from this class and implement
     the forward method. Provides checkpoint save/load for resume support.
+
+    中文：抽象基类，规定接口 forward(x) 输入 (B, L, C)、输出 (B, H)。
+    标签 y 通常只含目标列（如 Close，由 windowing 的 target_idx 决定），与输出逐元素对齐。
 
     Attributes:
         model_name: Name identifier for the model.

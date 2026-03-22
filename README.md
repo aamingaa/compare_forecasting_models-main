@@ -10,12 +10,14 @@ This repository contains the full benchmarking framework for a controlled, proto
 
 **Nine architectures** spanning four families are evaluated:
 
-| Family | Models |
-|---|---|
-| Transformer | Autoformer, iTransformer, PatchTST, TimeXer |
-| MLP / Linear | DLinear, N-HiTS |
-| CNN | ModernTCN, TimesNet |
-| RNN | LSTM |
+
+| Family       | Models                                      |
+| ------------ | ------------------------------------------- |
+| Transformer  | Autoformer, iTransformer, PatchTST, TimeXer |
+| MLP / Linear | DLinear, N-HiTS                             |
+| CNN          | ModernTCN, TimesNet                         |
+| RNN          | LSTM                                        |
+
 
 **Asset universe:** 12 hourly instruments across three classes — Cryptocurrency (BTC/USDT, ETH/USDT, BNB/USDT, ADA/USDT), Forex (EUR/USD, USD/JPY, GBP/USD, AUD/USD), and Equity Indices (Dow Jones, S&P 500, NASDAQ 100, DAX).
 
@@ -57,6 +59,14 @@ python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ## Usage
 
 All execution goes through the unified CLI entry point `src/main.py`.
+
+```
+python scripts/generate_processed.py --force
+
+git rm -r --cached data/processed
+git commit -m "Stop tracking data/processed"
+
+```
 
 ### Full pipeline (HPO → Final Training → Benchmark)
 
@@ -147,29 +157,33 @@ compare_forecasting_models/
 
 The benchmark follows a five-stage protocol that isolates architectural merit from confounding factors:
 
-| Stage | Description |
-|---|---|
-| 1. HPO | Fixed-seed (42) Bayesian optimisation via Optuna TPE, 5 trials per (model × asset class × horizon). Tuned on one representative asset per class only. |
-| 2. Config freeze | Best hyperparameters serialised to `configs/models/<model>/<category>/<horizon>/best_params.yaml` and held fixed for all assets in that class. |
+
+| Stage             | Description                                                                                                                                                                |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. HPO            | Fixed-seed (42) Bayesian optimisation via Optuna TPE, 5 trials per (model × asset class × horizon). Tuned on one representative asset per class only.                      |
+| 2. Config freeze  | Best hyperparameters serialised to `configs/models/<model>/<category>/<horizon>/best_params.yaml` and held fixed for all assets in that class.                             |
 | 3. Final training | Multi-seed retraining (seeds: 123, 456, 789) per (model × asset × horizon). Identical chronological 70/15/15 splits, OHLCV inputs, MSE loss, early stopping (patience 15). |
-| 4. Aggregation | Per-seed metrics (RMSE, MAE, Directional Accuracy) aggregated to mean ± std across seeds. |
-| 5. Benchmark | Global leaderboards, category-level analysis, statistical tests (Friedman-Iman-Davenport, Holm-Wilcoxon, Diebold-Mariano, variance decomposition). |
+| 4. Aggregation    | Per-seed metrics (RMSE, MAE, Directional Accuracy) aggregated to mean ± std across seeds.                                                                                  |
+| 5. Benchmark      | Global leaderboards, category-level analysis, statistical tests (Friedman-Iman-Davenport, Holm-Wilcoxon, Diebold-Mariano, variance decomposition).                         |
+
 
 ---
 
 ## Key Results
 
-| Rank | Model | Family | Mean Rank | 
-|---|---|---|---|
-| 1 | ModernTCN | CNN | 1.333 |
-| 2 | PatchTST | Transformer | 2.000 | 
-| 3 | iTransformer | Transformer | 3.667 |
-| 4 | TimeXer | Transformer | 4.292 |
-| 5 | DLinear | MLP/Linear | 4.958 |
-| 6 | N-HiTS | MLP | 5.250 | 
-| 7 | TimesNet | CNN | 7.708 |
-| 8 | Autoformer | Transformer | 7.833 |
-| 9 | LSTM | RNN | 7.958 |
+
+| Rank | Model        | Family      | Mean Rank |
+| ---- | ------------ | ----------- | --------- |
+| 1    | ModernTCN    | CNN         | 1.333     |
+| 2    | PatchTST     | Transformer | 2.000     |
+| 3    | iTransformer | Transformer | 3.667     |
+| 4    | TimeXer      | Transformer | 4.292     |
+| 5    | DLinear      | MLP/Linear  | 4.958     |
+| 6    | N-HiTS       | MLP         | 5.250     |
+| 7    | TimesNet     | CNN         | 7.708     |
+| 8    | Autoformer   | Transformer | 7.833     |
+| 9    | LSTM         | RNN         | 7.958     |
+
 
 - Architecture choice explains **99.90%** of total forecast variance; seed variation accounts for **0.01%**.
 - Rankings are **stable across horizons** despite 2–2.5× error amplification from h=4 to h=24.
@@ -213,3 +227,5 @@ This project contains both the research paper and code for our experiments. They
 
 - **Paper** – The paper and all accompanying figures are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. You are free to share and adapt the work, provided proper attribution is given.
 - **Code** – The source code in this repository is licensed under the MIT License. You are free to use, modify, and distribute the code, with or without modifications, provided that the original copyright notice and license is included.
+- 
+

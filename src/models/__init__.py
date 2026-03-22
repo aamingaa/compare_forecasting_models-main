@@ -1,4 +1,8 @@
-"""Models subpackage with automatic model discovery and registration."""
+"""Models subpackage with automatic model discovery and registration.
+
+中文：本包在导入时扫描 src/models 下模块，通过 @register_model 将模型类注册到全局表，
+供配置中的模型名（如 PatchTST）解析为可实例化的类。
+"""
 
 from __future__ import annotations
 
@@ -9,7 +13,7 @@ from typing import Dict, List, Type
 
 from src.models.base import BaseForecaster
 
-# Model registry - maps model name to class
+# 模型注册表：配置里的名称字符串 -> BaseForecaster 子类
 _MODEL_REGISTRY: Dict[str, Type[BaseForecaster]] = {}
 
 

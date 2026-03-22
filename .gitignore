@@ -1,2 +1,5 @@
 paper/
 results/
+data/processed
+logs/
+src/models/__pycache__

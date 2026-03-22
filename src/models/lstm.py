@@ -11,6 +11,8 @@ registered with @register_model("LSTM"), stores hyperparameters in
 super().__init__ and validates tensor shapes/devices at entry points.
 
 Constraints satisfied: no normalization, no seq-to-seq decoding, no time pooling.
+
+中文：编码器吃满窗口 (B,L,C)，只取最后时刻隐状态 (B, hidden×方向数)，经 MLP 直接映射到 (B,H)，多步预测为一步输出向量。
 """
 
 from __future__ import annotations
@@ -40,6 +42,8 @@ class LSTMForecaster(BaseForecaster):
     Notes:
         - num_layers: Number of stacked LSTM layers (default=2, configurable).
         - forward() validates input shape and device compatibility.
+
+    中文：batch_first=True，故 x 为 (B, L, C)；输出为单变量 (B, H)，与 train_y 对齐。
     """
 
     def __init__(

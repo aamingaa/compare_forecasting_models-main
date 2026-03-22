@@ -5,6 +5,8 @@ Inverted Transformer that applies attention across the variate (feature)
 dimension rather than the temporal dimension, treating each feature as
 a token. Based on "iTransformer: Inverted Transformers Are Effective for
 Time Series Forecasting".
+
+中文：注意力作用在「变量维」而非时间维；每个变量是一条长度为 L 的序列被嵌入为 d_model 维 token，再经 Encoder，最后每变量投影出 H 步，只取 target_idx 并反归一化得到 (B,H)。
 """
 
 from __future__ import annotations

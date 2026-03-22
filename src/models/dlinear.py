@@ -10,6 +10,8 @@ Exact, minimal DLinear implementation adapted for OHLCV financial series.
 Notes:
 - No hidden MLPs, no activations, no extra projections beyond selecting Close
 - Weight initialization is Xavier for stability
+
+中文：全程在 (B, L, C) 上分解为季节项+趋势项，各用线性层做 L→H，再相加得到 (B, H, C)，最后取 target_idx（如 Close）得到 (B, H)。
 """
 
 from __future__ import annotations
@@ -27,6 +29,8 @@ class MovingAvg(nn.Module):
     """Simple moving-average smoothing used for decomposition.
 
     Pads asymmetrically for even kernels to preserve sequence length.
+
+    中文：对每条序列在时间维上做滑动平均，输出与输入同形 (B, L, C)，用作趋势项。
     """
 
     def __init__(self, kernel_size: int, stride: int = 1) -> None:
@@ -44,7 +48,10 @@ class MovingAvg(nn.Module):
 
 
 class SeriesDecomp(nn.Module):
-    """Decomposition module returning (seasonal, trend)."""
+    """Decomposition module returning (seasonal, trend).
+
+    中文：x = 季节(残差) + 趋势；残差 = x - 滑动平均(x)。
+    """
 
     def __init__(self, kernel_size: int) -> None:
         super().__init__()
@@ -60,6 +67,8 @@ class SeriesDecomp(nn.Module):
 @register_model("DLinear")
 class DLinearForecaster(BaseForecaster):
     """Paper-accurate DLinear.
+
+    中文：输入 (B,L,C)，输出仅目标通道 (B,H)。线性映射作用在「每个通道的时间维 L」上。
 
     Args:
         kernel_size: moving-average kernel for decomposition
@@ -144,10 +153,10 @@ class DLinearForecaster(BaseForecaster):
         assert L == self.window_size and C == self.input_size
         assert torch.isfinite(x).all(), "Input contains NaN/Inf"
 
-        # Decompose into seasonal (residual) and trend (moving mean)
+        # 分解：季节项与趋势项，均为 (B, L, C)
         seasonal, trend = self.decomposition(x)  # both (B, L, C)
 
-        # Map L -> H (apply linear along last dim after appropriate permute)
+        # 沿时间维 L→H：individual 时每通道独立 Linear；否则 (B,C,L)→(B,C,H) 再 permute 为 (B,H,C)
         if self.individual:
             # list comprehension + stack -> (B, H, C)
             seasonal_out = torch.stack(
@@ -164,7 +173,7 @@ class DLinearForecaster(BaseForecaster):
 
         out_multivariate = seasonal_out + trend_out  # (B, H, C)
 
-        # Select Close channel as final univariate forecast
+        # 只保留目标变量（如 Close）通道 → (B, H)
         out_close = out_multivariate[:, :, self.target_idx]  # (B, H)
 
         assert out_close.shape == (B, self.horizon)

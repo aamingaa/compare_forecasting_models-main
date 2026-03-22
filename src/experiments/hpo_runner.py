@@ -93,7 +93,7 @@ def run_hpo(
     # Setup
     fixed_seed = config.hpo.get("fixed_seed", 42)
     set_seed(fixed_seed)
-    device = get_device(config.base.get("device", "auto"))
+    device = get_device(config.base.get("device", "auto"), model_name=model_name)
 
     representative = config.get_representative_asset(category)
 

@@ -50,7 +50,7 @@ def run_final_single(
         Dictionary containing metrics and training metadata.
     """
     set_seed(seed)
-    device = get_device(config.base.get("device", "auto"))
+    device = get_device(config.base.get("device", "auto"), model_name=model_name)
 
     exp_logger = setup_experiment_logger(
         "final", model_name, category, asset_name, horizon,

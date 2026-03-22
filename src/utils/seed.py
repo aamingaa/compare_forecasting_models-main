@@ -48,6 +48,28 @@ def _allow_unsupported_mps_override() -> bool:
     }
 
 
+# Models that call torch.fft in the forward path; MPS + torch.fft was flaky on macOS < 14.
+MPS_FFT_GUARD_MODELS = frozenset({"TimesNet", "Autoformer"})
+
+
+def _should_avoid_mps_on_old_macos_for_fft(model_name: Optional[str]) -> bool:
+    """Whether to fall back to CPU instead of MPS on macOS < 14 for FFT risk.
+
+    - If ``model_name`` is None (caller did not specify), stay conservative and avoid MPS.
+    - If ``model_name`` is TimesNet or Autoformer, avoid MPS on macOS < 14.
+    - All other registered models may use MPS on macOS < 14.
+
+    Override: set env ``FORCE_UNSUPPORTED_MPS=1`` to allow MPS anyway.
+    """
+    if _is_mps_fft_supported():
+        return False
+    if _allow_unsupported_mps_override():
+        return False
+    if model_name is None:
+        return True
+    return model_name in MPS_FFT_GUARD_MODELS
+
+
 def set_seed(seed: int, deterministic: bool = True) -> None:
     """Set random seed for reproducibility across all libraries.
 
@@ -68,12 +90,22 @@ def set_seed(seed: int, deterministic: bool = True) -> None:
         os.environ["PYTHONHASHSEED"] = str(seed)
 
 
-def get_device(preference: str = "auto") -> torch.device:
+def get_device(preference: str = "auto", model_name: Optional[str] = None) -> torch.device:
     """Resolve and validate a torch device from a preference string.
 
     Supports: "cpu", "cuda", "cuda:<index>", "mps", and "auto".
 
     Behavior for "auto": prefer CUDA, then MPS, then CPU.
+
+    On **macOS < 14**, MPS + ``torch.fft`` was unreliable. If ``model_name`` is
+    ``TimesNet`` or ``Autoformer`` (or omitted), we fall back to CPU unless
+    ``FORCE_UNSUPPORTED_MPS=1``. Other models may still use MPS when
+    ``model_name`` is provided.
+
+    Args:
+        preference: Device preference string or a :class:`torch.device` instance.
+        model_name: Registered model name (e.g. ``PatchTST``). Used only for the
+            macOS < 14 MPS/FFT guard; omit for legacy conservative behavior.
 
     Raises:
         ValueError: when a requested device is not available or the index is invalid.
@@ -91,12 +123,20 @@ def get_device(preference: str = "auto") -> torch.device:
         if torch.cuda.is_available():
             return torch.device("cuda:0")
         if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
-            if not _is_mps_fft_supported() and not _allow_unsupported_mps_override():
-                warnings.warn(
-                    "Detected macOS < 14 with MPS available. "
-                    "This project uses FFT ops that may fail on MPS, falling back to CPU. "
-                    "Set FORCE_UNSUPPORTED_MPS=1 to force MPS anyway."
-                )
+            if _should_avoid_mps_on_old_macos_for_fft(model_name):
+                if model_name in MPS_FFT_GUARD_MODELS:
+                    warnings.warn(
+                        f"Model '{model_name}' uses torch.fft; on macOS < 14 MPS may be "
+                        "unreliable. Falling back to CPU. Set FORCE_UNSUPPORTED_MPS=1 to "
+                        "force MPS anyway, or upgrade to macOS 14+."
+                    )
+                elif model_name is None:
+                    warnings.warn(
+                        "Detected macOS < 14 with MPS available; get_device() was called "
+                        "without model_name, so falling back to CPU (conservative). "
+                        "Pass model_name for selective MPS, set FORCE_UNSUPPORTED_MPS=1, "
+                        "or upgrade to macOS 14+."
+                    )
                 return torch.device("cpu")
             return torch.device("mps")
         return torch.device("cpu")
@@ -106,12 +146,19 @@ def get_device(preference: str = "auto") -> torch.device:
 
     if pref == "mps":
         if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
-            if not _is_mps_fft_supported() and not _allow_unsupported_mps_override():
-                warnings.warn(
-                    "MPS requested on macOS < 14. "
-                    "This project may fail on torch.fft with MPS, falling back to CPU. "
-                    "Set FORCE_UNSUPPORTED_MPS=1 to force MPS anyway."
-                )
+            if _should_avoid_mps_on_old_macos_for_fft(model_name):
+                if model_name in MPS_FFT_GUARD_MODELS:
+                    warnings.warn(
+                        f"MPS requested but model '{model_name}' uses torch.fft; on "
+                        "macOS < 14 falling back to CPU. Set FORCE_UNSUPPORTED_MPS=1 to "
+                        "force MPS anyway, or upgrade to macOS 14+."
+                    )
+                elif model_name is None:
+                    warnings.warn(
+                        "MPS requested on macOS < 14; get_device() was called without "
+                        "model_name, falling back to CPU. Pass model_name for selective "
+                        "MPS, set FORCE_UNSUPPORTED_MPS=1, or upgrade to macOS 14+."
+                    )
                 return torch.device("cpu")
             return torch.device("mps")
         raise ValueError("MPS requested but not available on this machine")

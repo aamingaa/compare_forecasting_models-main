@@ -2,3 +2,7 @@
 2026-03-22 10:17:21,401 - hpo.TimesNet.forex.EURUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/EURUSD/24
 2026-03-22 10:18:40,013 - hpo.TimesNet.forex.EURUSD.h24 - INFO - Starting HPO: model=TimesNet, category=forex, asset=EURUSD, horizon=24
 2026-03-22 10:18:40,013 - hpo.TimesNet.forex.EURUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/EURUSD/24
+2026-03-22 11:27:37,695 - hpo.TimesNet.forex.EURUSD.h24 - INFO - Starting HPO: model=TimesNet, category=forex, asset=EURUSD, horizon=24
+2026-03-22 11:27:37,695 - hpo.TimesNet.forex.EURUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/EURUSD/24
+2026-03-22 11:28:56,373 - hpo.TimesNet.forex.EURUSD.h24 - INFO - Starting HPO: model=TimesNet, category=forex, asset=EURUSD, horizon=24
+2026-03-22 11:28:56,373 - hpo.TimesNet.forex.EURUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/EURUSD/24

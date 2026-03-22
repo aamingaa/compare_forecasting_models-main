@@ -2,3 +2,7 @@
 2026-03-22 10:17:21,398 - hpo.TimeXer.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
 2026-03-22 10:18:40,010 - hpo.TimeXer.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=TimeXer, category=crypto, asset=BTCUSDT, horizon=24
 2026-03-22 10:18:40,010 - hpo.TimeXer.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
+2026-03-22 11:27:37,677 - hpo.TimeXer.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=TimeXer, category=crypto, asset=BTCUSDT, horizon=24
+2026-03-22 11:27:37,679 - hpo.TimeXer.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
+2026-03-22 11:28:56,370 - hpo.TimeXer.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=TimeXer, category=crypto, asset=BTCUSDT, horizon=24
+2026-03-22 11:28:56,370 - hpo.TimeXer.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24

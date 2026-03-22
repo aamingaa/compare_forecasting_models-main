@@ -8,3 +8,7 @@
 2026-03-22 10:17:21,397 - hpo.PatchTST.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
 2026-03-22 10:18:40,009 - hpo.PatchTST.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=PatchTST, category=indices, asset=USA30IDXUSD, horizon=4
 2026-03-22 10:18:40,009 - hpo.PatchTST.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
+2026-03-22 11:27:37,676 - hpo.PatchTST.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=PatchTST, category=indices, asset=USA30IDXUSD, horizon=4
+2026-03-22 11:27:37,676 - hpo.PatchTST.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
+2026-03-22 11:28:56,369 - hpo.PatchTST.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=PatchTST, category=indices, asset=USA30IDXUSD, horizon=4
+2026-03-22 11:28:56,369 - hpo.PatchTST.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4

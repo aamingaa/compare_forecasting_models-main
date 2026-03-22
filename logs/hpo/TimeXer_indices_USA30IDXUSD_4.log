@@ -2,3 +2,7 @@
 2026-03-22 10:17:21,399 - hpo.TimeXer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
 2026-03-22 10:18:40,011 - hpo.TimeXer.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=TimeXer, category=indices, asset=USA30IDXUSD, horizon=4
 2026-03-22 10:18:40,011 - hpo.TimeXer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
+2026-03-22 11:27:37,692 - hpo.TimeXer.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=TimeXer, category=indices, asset=USA30IDXUSD, horizon=4
+2026-03-22 11:27:37,692 - hpo.TimeXer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
+2026-03-22 11:28:56,371 - hpo.TimeXer.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=TimeXer, category=indices, asset=USA30IDXUSD, horizon=4
+2026-03-22 11:28:56,371 - hpo.TimeXer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4

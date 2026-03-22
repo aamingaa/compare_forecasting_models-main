@@ -8,11 +8,44 @@ Python, NumPy, and PyTorch for experiment reproducibility.
 from __future__ import annotations
 
 import os
+import platform
 import random
+import warnings
 from typing import Optional
 
 import numpy as np
 import torch
+
+
+def _get_macos_major_version() -> Optional[int]:
+    """Return macOS major version, e.g. 13/14, or None."""
+    if platform.system() != "Darwin":
+        return None
+    version = platform.mac_ver()[0]
+    if not version:
+        return None
+    try:
+        return int(version.split(".")[0])
+    except (ValueError, IndexError):
+        return None
+
+
+def _is_mps_fft_supported() -> bool:
+    """Project-level guard for FFT-heavy models on Apple Silicon."""
+    macos_major = _get_macos_major_version()
+    if macos_major is None:
+        return True
+    return macos_major >= 14
+
+
+def _allow_unsupported_mps_override() -> bool:
+    """Allow users to bypass the macOS<14 MPS safety fallback."""
+    return os.getenv("FORCE_UNSUPPORTED_MPS", "0").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
 
 
 def set_seed(seed: int, deterministic: bool = True) -> None:
@@ -58,6 +91,13 @@ def get_device(preference: str = "auto") -> torch.device:
         if torch.cuda.is_available():
             return torch.device("cuda:0")
         if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
+            if not _is_mps_fft_supported() and not _allow_unsupported_mps_override():
+                warnings.warn(
+                    "Detected macOS < 14 with MPS available. "
+                    "This project uses FFT ops that may fail on MPS, falling back to CPU. "
+                    "Set FORCE_UNSUPPORTED_MPS=1 to force MPS anyway."
+                )
+                return torch.device("cpu")
             return torch.device("mps")
         return torch.device("cpu")
 
@@ -66,6 +106,13 @@ def get_device(preference: str = "auto") -> torch.device:
 
     if pref == "mps":
         if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
+            if not _is_mps_fft_supported() and not _allow_unsupported_mps_override():
+                warnings.warn(
+                    "MPS requested on macOS < 14. "
+                    "This project may fail on torch.fft with MPS, falling back to CPU. "
+                    "Set FORCE_UNSUPPORTED_MPS=1 to force MPS anyway."
+                )
+                return torch.device("cpu")
             return torch.device("mps")
         raise ValueError("MPS requested but not available on this machine")
 

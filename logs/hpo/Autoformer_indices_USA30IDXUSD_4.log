@@ -13,3 +13,7 @@
 2026-03-22 10:39:56,132 - hpo.Autoformer.indices.USA30IDXUSD.h4 - INFO - Best trial: 0, value: inf
 2026-03-22 10:39:56,132 - hpo.Autoformer.indices.USA30IDXUSD.h4 - INFO - Best params: {'moving_avg': 9, 'd_model': 128, 'n_heads': 4, 'e_layers': 1, 'd_layers': 2, 'd_ff': 128, 'factor': 3, 'dropout': 0.2, 'activation': 'gelu', 'embed': 'timeF', 'learning_rate': 0.0008152843673110737, 'batch_size': 128}
 2026-03-22 10:39:56,134 - hpo.Autoformer.indices.USA30IDXUSD.h4 - INFO - HPO complete. Results saved to /Users/aming/project/python/compare_forecasting_models-main/models/hpo/Autoformer/indices/USA30IDXUSD/4
+2026-03-22 11:27:37,626 - hpo.Autoformer.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=Autoformer, category=indices, asset=USA30IDXUSD, horizon=4
+2026-03-22 11:27:37,626 - hpo.Autoformer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
+2026-03-22 11:28:56,355 - hpo.Autoformer.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=Autoformer, category=indices, asset=USA30IDXUSD, horizon=4
+2026-03-22 11:28:56,355 - hpo.Autoformer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4

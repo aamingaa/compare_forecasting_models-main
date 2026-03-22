@@ -1,6 +1,0 @@
-2026-03-22 10:17:27,836 - final.LSTM.forex.USDJPY.h24 - INFO - Final training: model=LSTM, asset=USDJPY, horizon=24, seed=123
-2026-03-22 10:17:27,836 - final.LSTM.forex.USDJPY.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/USDJPY/24
-2026-03-22 10:17:27,837 - final.LSTM.forex.USDJPY.h24 - INFO - Final training: model=LSTM, asset=USDJPY, horizon=24, seed=456
-2026-03-22 10:17:27,837 - final.LSTM.forex.USDJPY.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/USDJPY/24
-2026-03-22 10:17:27,837 - final.LSTM.forex.USDJPY.h24 - INFO - Final training: model=LSTM, asset=USDJPY, horizon=24, seed=789
-2026-03-22 10:17:27,837 - final.LSTM.forex.USDJPY.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/USDJPY/24

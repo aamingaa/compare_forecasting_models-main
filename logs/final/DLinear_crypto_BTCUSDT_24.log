@@ -1,6 +1,0 @@
-2026-03-22 10:17:27,805 - final.DLinear.crypto.BTCUSDT.h24 - INFO - Final training: model=DLinear, asset=BTCUSDT, horizon=24, seed=123
-2026-03-22 10:17:27,805 - final.DLinear.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
-2026-03-22 10:17:27,805 - final.DLinear.crypto.BTCUSDT.h24 - INFO - Final training: model=DLinear, asset=BTCUSDT, horizon=24, seed=456
-2026-03-22 10:17:27,805 - final.DLinear.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
-2026-03-22 10:17:27,805 - final.DLinear.crypto.BTCUSDT.h24 - INFO - Final training: model=DLinear, asset=BTCUSDT, horizon=24, seed=789
-2026-03-22 10:17:27,805 - final.DLinear.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24

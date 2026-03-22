@@ -1,8 +1,0 @@
-2026-03-22 10:17:21,395 - hpo.N-HiTS.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=N-HiTS, category=indices, asset=USA30IDXUSD, horizon=4
-2026-03-22 10:17:21,395 - hpo.N-HiTS.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
-2026-03-22 10:18:40,007 - hpo.N-HiTS.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=N-HiTS, category=indices, asset=USA30IDXUSD, horizon=4
-2026-03-22 10:18:40,007 - hpo.N-HiTS.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
-2026-03-22 11:27:37,637 - hpo.N-HiTS.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=N-HiTS, category=indices, asset=USA30IDXUSD, horizon=4
-2026-03-22 11:27:37,637 - hpo.N-HiTS.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
-2026-03-22 11:28:56,366 - hpo.N-HiTS.indices.USA30IDXUSD.h4 - INFO - Starting HPO: model=N-HiTS, category=indices, asset=USA30IDXUSD, horizon=4
-2026-03-22 11:28:56,366 - hpo.N-HiTS.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4

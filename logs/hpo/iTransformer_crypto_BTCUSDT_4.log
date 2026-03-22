@@ -1,8 +1,0 @@
-2026-03-22 10:17:21,402 - hpo.iTransformer.crypto.BTCUSDT.h4 - INFO - Starting HPO: model=iTransformer, category=crypto, asset=BTCUSDT, horizon=4
-2026-03-22 10:17:21,402 - hpo.iTransformer.crypto.BTCUSDT.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/4
-2026-03-22 10:18:40,014 - hpo.iTransformer.crypto.BTCUSDT.h4 - INFO - Starting HPO: model=iTransformer, category=crypto, asset=BTCUSDT, horizon=4
-2026-03-22 10:18:40,014 - hpo.iTransformer.crypto.BTCUSDT.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/4
-2026-03-22 11:27:37,696 - hpo.iTransformer.crypto.BTCUSDT.h4 - INFO - Starting HPO: model=iTransformer, category=crypto, asset=BTCUSDT, horizon=4
-2026-03-22 11:27:37,696 - hpo.iTransformer.crypto.BTCUSDT.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/4
-2026-03-22 11:28:56,375 - hpo.iTransformer.crypto.BTCUSDT.h4 - INFO - Starting HPO: model=iTransformer, category=crypto, asset=BTCUSDT, horizon=4
-2026-03-22 11:28:56,375 - hpo.iTransformer.crypto.BTCUSDT.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/4

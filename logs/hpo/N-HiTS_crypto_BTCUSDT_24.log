@@ -1,8 +1,0 @@
-2026-03-22 10:17:21,394 - hpo.N-HiTS.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=N-HiTS, category=crypto, asset=BTCUSDT, horizon=24
-2026-03-22 10:17:21,394 - hpo.N-HiTS.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
-2026-03-22 10:18:40,006 - hpo.N-HiTS.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=N-HiTS, category=crypto, asset=BTCUSDT, horizon=24
-2026-03-22 10:18:40,006 - hpo.N-HiTS.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
-2026-03-22 11:27:37,636 - hpo.N-HiTS.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=N-HiTS, category=crypto, asset=BTCUSDT, horizon=24
-2026-03-22 11:27:37,636 - hpo.N-HiTS.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24
-2026-03-22 11:28:56,365 - hpo.N-HiTS.crypto.BTCUSDT.h24 - INFO - Starting HPO: model=N-HiTS, category=crypto, asset=BTCUSDT, horizon=24
-2026-03-22 11:28:56,365 - hpo.N-HiTS.crypto.BTCUSDT.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/crypto/BTCUSDT/24

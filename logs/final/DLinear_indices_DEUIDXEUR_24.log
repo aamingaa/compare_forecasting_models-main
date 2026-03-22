@@ -1,6 +1,0 @@
-2026-03-22 10:17:27,825 - final.DLinear.indices.DEUIDXEUR.h24 - INFO - Final training: model=DLinear, asset=DEUIDXEUR, horizon=24, seed=123
-2026-03-22 10:17:27,825 - final.DLinear.indices.DEUIDXEUR.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/DEUIDXEUR/24
-2026-03-22 10:17:27,825 - final.DLinear.indices.DEUIDXEUR.h24 - INFO - Final training: model=DLinear, asset=DEUIDXEUR, horizon=24, seed=456
-2026-03-22 10:17:27,825 - final.DLinear.indices.DEUIDXEUR.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/DEUIDXEUR/24
-2026-03-22 10:17:27,826 - final.DLinear.indices.DEUIDXEUR.h24 - INFO - Final training: model=DLinear, asset=DEUIDXEUR, horizon=24, seed=789
-2026-03-22 10:17:27,826 - final.DLinear.indices.DEUIDXEUR.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/DEUIDXEUR/24

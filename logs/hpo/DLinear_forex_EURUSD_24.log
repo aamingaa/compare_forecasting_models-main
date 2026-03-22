@@ -1,0 +1,4 @@
+2026-03-22 10:17:21,386 - hpo.DLinear.forex.EURUSD.h24 - INFO - Starting HPO: model=DLinear, category=forex, asset=EURUSD, horizon=24
+2026-03-22 10:17:21,386 - hpo.DLinear.forex.EURUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/EURUSD/24
+2026-03-22 10:18:39,999 - hpo.DLinear.forex.EURUSD.h24 - INFO - Starting HPO: model=DLinear, category=forex, asset=EURUSD, horizon=24
+2026-03-22 10:18:39,999 - hpo.DLinear.forex.EURUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/EURUSD/24

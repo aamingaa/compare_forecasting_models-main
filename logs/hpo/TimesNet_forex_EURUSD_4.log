@@ -1,0 +1,4 @@
+2026-03-22 10:17:21,400 - hpo.TimesNet.forex.EURUSD.h4 - INFO - Starting HPO: model=TimesNet, category=forex, asset=EURUSD, horizon=4
+2026-03-22 10:17:21,400 - hpo.TimesNet.forex.EURUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/EURUSD/4
+2026-03-22 10:18:40,013 - hpo.TimesNet.forex.EURUSD.h4 - INFO - Starting HPO: model=TimesNet, category=forex, asset=EURUSD, horizon=4
+2026-03-22 10:18:40,013 - hpo.TimesNet.forex.EURUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/forex/EURUSD/4

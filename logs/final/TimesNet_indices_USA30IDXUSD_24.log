@@ -1,0 +1,6 @@
+2026-03-22 10:17:27,956 - final.TimesNet.indices.USA30IDXUSD.h24 - INFO - Final training: model=TimesNet, asset=USA30IDXUSD, horizon=24, seed=123
+2026-03-22 10:17:27,956 - final.TimesNet.indices.USA30IDXUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/24
+2026-03-22 10:17:27,956 - final.TimesNet.indices.USA30IDXUSD.h24 - INFO - Final training: model=TimesNet, asset=USA30IDXUSD, horizon=24, seed=456
+2026-03-22 10:17:27,956 - final.TimesNet.indices.USA30IDXUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/24
+2026-03-22 10:17:27,957 - final.TimesNet.indices.USA30IDXUSD.h24 - INFO - Final training: model=TimesNet, asset=USA30IDXUSD, horizon=24, seed=789
+2026-03-22 10:17:27,957 - final.TimesNet.indices.USA30IDXUSD.h24 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/24

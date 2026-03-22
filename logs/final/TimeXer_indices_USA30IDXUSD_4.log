@@ -1,0 +1,6 @@
+2026-03-22 10:17:27,932 - final.TimeXer.indices.USA30IDXUSD.h4 - INFO - Final training: model=TimeXer, asset=USA30IDXUSD, horizon=4, seed=123
+2026-03-22 10:17:27,932 - final.TimeXer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
+2026-03-22 10:17:27,932 - final.TimeXer.indices.USA30IDXUSD.h4 - INFO - Final training: model=TimeXer, asset=USA30IDXUSD, horizon=4, seed=456
+2026-03-22 10:17:27,932 - final.TimeXer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4
+2026-03-22 10:17:27,933 - final.TimeXer.indices.USA30IDXUSD.h4 - INFO - Final training: model=TimeXer, asset=USA30IDXUSD, horizon=4, seed=789
+2026-03-22 10:17:27,933 - final.TimeXer.indices.USA30IDXUSD.h4 - INFO - Loading processed data from /Users/aming/project/python/compare_forecasting_models-main/data/processed/indices/USA30IDXUSD/4

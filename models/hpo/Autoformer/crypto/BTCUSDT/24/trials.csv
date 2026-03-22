@@ -1,0 +1,6 @@
+number,value,state,moving_avg,d_model,n_heads,e_layers,d_layers,d_ff,factor,dropout,activation,embed,learning_rate,batch_size
+0,inf,TrialState.COMPLETE,9,128,4,1,2,128,3,0.2,gelu,timeF,0.0008152843673110737,128
+1,inf,TrialState.COMPLETE,9,128,4,1,2,128,3,0.1,gelu,timeF,0.0005564426587452864,64
+2,inf,TrialState.COMPLETE,9,128,4,1,1,128,3,0.05,gelu,timeF,0.002298752892366083,128
+3,inf,TrialState.COMPLETE,9,64,4,1,2,128,3,0.05,gelu,timeF,0.0009339401285535342,64
+4,inf,TrialState.COMPLETE,9,128,8,2,1,128,3,0.15000000000000002,gelu,timeF,0.0005929453342787635,64

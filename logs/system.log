@@ -1,0 +1,38 @@
+2026-03-22 09:54:10,040 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 09:54:10,040 - main - INFO - ============================================================
+2026-03-22 09:54:10,040 - main - INFO - Starting Hyperparameter Optimization
+2026-03-22 09:54:10,040 - main - INFO - ============================================================
+2026-03-22 09:55:06,707 - main - INFO - Done!
+2026-03-22 10:16:59,183 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 10:16:59,183 - main - INFO - ============================================================
+2026-03-22 10:16:59,184 - main - INFO - Starting Hyperparameter Optimization
+2026-03-22 10:16:59,184 - main - INFO - ============================================================
+2026-03-22 10:17:00,129 - main - INFO - Done!
+2026-03-22 10:17:05,455 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 10:17:05,455 - main - INFO - ============================================================
+2026-03-22 10:17:05,455 - main - INFO - Starting Hyperparameter Optimization
+2026-03-22 10:17:05,455 - main - INFO - ============================================================
+2026-03-22 10:17:06,010 - main - INFO - Done!
+2026-03-22 10:17:20,830 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 10:17:20,831 - main - INFO - ============================================================
+2026-03-22 10:17:20,831 - main - INFO - Starting Hyperparameter Optimization
+2026-03-22 10:17:20,831 - main - INFO - ============================================================
+2026-03-22 10:17:21,405 - main - INFO - Done!
+2026-03-22 10:17:27,232 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 10:17:27,232 - main - INFO - ============================================================
+2026-03-22 10:17:27,232 - main - INFO - Starting Multi-Seed Final Training
+2026-03-22 10:17:27,232 - main - INFO - ============================================================
+2026-03-22 10:17:27,988 - main - INFO - Done!
+2026-03-22 10:17:33,288 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 10:17:33,288 - main - INFO - ============================================================
+2026-03-22 10:17:33,288 - main - INFO - Starting Benchmarking
+2026-03-22 10:17:33,288 - main - INFO - ============================================================
+2026-03-22 10:18:39,412 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 10:18:39,412 - main - INFO - ============================================================
+2026-03-22 10:18:39,412 - main - INFO - Starting Hyperparameter Optimization
+2026-03-22 10:18:39,412 - main - INFO - ============================================================
+2026-03-22 10:18:40,016 - main - INFO - Done!
+2026-03-22 10:39:15,576 - main - INFO - Available models: ['Autoformer', 'DLinear', 'LSTM', 'ModernTCN', 'N-HiTS', 'PatchTST', 'TimeXer', 'TimesNet', 'iTransformer']
+2026-03-22 10:39:15,577 - main - INFO - ============================================================
+2026-03-22 10:39:15,577 - main - INFO - Starting Hyperparameter Optimization
+2026-03-22 10:39:15,577 - main - INFO - ============================================================

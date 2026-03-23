@@ -1,0 +1,60 @@
+{
+  "asset_names": [
+    "USA30IDXUSD",
+    "USA500IDXUSD",
+    "USATECHIDXUSD",
+    "DEUIDXEUR"
+  ],
+  "features": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume"
+  ],
+  "target": "close",
+  "window_size": 24,
+  "horizon": 4,
+  "shape": {
+    "train_x": [
+      210,
+      24,
+      4,
+      5
+    ],
+    "train_y": [
+      210,
+      4,
+      4
+    ],
+    "val_x": [
+      45,
+      24,
+      4,
+      5
+    ],
+    "val_y": [
+      45,
+      4,
+      4
+    ],
+    "test_x": [
+      45,
+      24,
+      4,
+      5
+    ],
+    "test_y": [
+      45,
+      4,
+      4
+    ]
+  },
+  "scaler_type": "standard",
+  "split": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "max_samples": 300
+}

@@ -1,0 +1,60 @@
+{
+  "asset_names": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "ADAUSDT"
+  ],
+  "features": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume"
+  ],
+  "target": "close",
+  "window_size": 96,
+  "horizon": 24,
+  "shape": {
+    "train_x": [
+      210,
+      96,
+      4,
+      5
+    ],
+    "train_y": [
+      210,
+      4,
+      24
+    ],
+    "val_x": [
+      45,
+      96,
+      4,
+      5
+    ],
+    "val_y": [
+      45,
+      4,
+      24
+    ],
+    "test_x": [
+      45,
+      96,
+      4,
+      5
+    ],
+    "test_y": [
+      45,
+      4,
+      24
+    ]
+  },
+  "scaler_type": "standard",
+  "split": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "max_samples": 300
+}

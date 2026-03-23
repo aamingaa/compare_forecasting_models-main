@@ -1,6 +1,7 @@
 paper/
 results/
 data/processed
+data/processed-cross-asset
 logs/
 src/models/__pycache__
 models/final/

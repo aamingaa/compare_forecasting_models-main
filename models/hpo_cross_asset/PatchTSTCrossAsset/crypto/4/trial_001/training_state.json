@@ -1,0 +1,25 @@
+{
+  "model_name": "PatchTSTCrossAsset",
+  "category": "crypto",
+  "asset": "__cross_asset__",
+  "horizon": 4,
+  "epoch": 50,
+  "best_val_loss": 5.899191856384277,
+  "current_val_loss": 5.916394948959351,
+  "training_completed": true,
+  "timestamp": "2026-03-23T09:06:05.252607",
+  "hyperparameters": {
+    "num_assets": 4,
+    "d_model": 128,
+    "patch_len": 24,
+    "stride": 8,
+    "n_heads": 8,
+    "time_layers": 1,
+    "asset_layers": 2,
+    "d_ff": 128,
+    "dropout": 0.2,
+    "learning_rate": 0.0027717450958881745,
+    "batch_size": 32
+  },
+  "seed": 42
+}

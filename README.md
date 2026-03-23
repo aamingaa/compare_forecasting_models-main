@@ -103,6 +103,39 @@ make clean      # Remove all generated outputs (data/processed, models, results,
 make clean-results  # Remove only results and logs
 ```
 
+### Cross-asset branch (isolated)
+
+An isolated cross-asset workflow is available without changing the existing single-asset pipeline.  
+It uses new entry points and separate output folders.
+
+#### What is isolated
+
+- **Single-asset pipeline remains unchanged:** `src/main.py`, `src/data/windowing.py`, `src/experiments/hpo_runner.py`, `src/experiments/final_runner.py`
+- **Cross-asset branch entry points:**
+  - `scripts/generate_processed_cross_asset.py`
+  - `src/main_cross_asset.py`
+- **Cross-asset model:** `PatchTSTCrossAsset`
+
+#### Data and output paths (cross-asset only)
+
+- Processed data: `data/processed_cross_asset/<category>/<horizon>/`
+- HPO checkpoints: `models/hpo_cross_asset/<model>/<category>/<horizon>/`
+- Final checkpoints: `models/final_cross_asset/<model>/<category>/<horizon>/<seed>/`
+- Final results: `results/final_cross_asset/<model>/<category>/<horizon>/<seed>/`
+
+#### Minimal run commands
+
+```bash
+# 1) Build cross-asset processed datasets
+python scripts/generate_processed_cross_asset.py --force
+
+# 2) Hyperparameter optimization (cross-asset branch)
+python src/main_cross_asset.py --mode hpo --models PatchTSTCrossAsset
+
+# 3) Multi-seed final training (cross-asset branch)
+python src/main_cross_asset.py --mode final --models PatchTSTCrossAsset
+```
+
 ---
 
 ## Project Structure
